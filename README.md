@@ -1,14 +1,12 @@
-# Title
+# Temporal Fusion Transformer for Stock Movement Prediction
 
-**Type:** Master's Thesis / Bachelor's Thesis
+**Type:** Master's Thesis
 
-**Author:** xxx
+**Author:** Stefan Grosse
 
-**Supervisor:** xxx (only if different from the 1st or the 2nd Examiner)
+**1st Examiner:** Prof. Dr. Stefan Lessmann
 
-**1st Examiner:** xxx 
-
-**2nd Examiner:** xxx 
+**2nd Examiner:** Prof. Dr. Benjamin Fabian
 
 [Insert here a figure explaining your approach or main results]
 
