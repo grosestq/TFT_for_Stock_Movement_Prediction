@@ -46,7 +46,7 @@ All results can be reproduced by following the steps from data download to produ
 
 2 - [Data preparation](Data_preparation.ipynb) produces all input variables and a portfolio table.
 
-2b - [Data analysis](2b-Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
+2b - [Data analysis](2b-Data-analysis.ipynb) provides a portfolio performance plot and summary statistics.
 
 3 - Each model has its own Notebook. Note that rerunning a model would override the results, and therefore, it should be saved in subfolders such as No.1, No.2, etc.
 
