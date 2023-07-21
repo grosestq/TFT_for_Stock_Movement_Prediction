@@ -8,97 +8,70 @@
 
 **2nd Examiner:** Prof. Dr. Benjamin Fabian
 
-[Insert here a figure explaining your approach or main results]
+![results](/results/Results1.png)
 
-![results](/result.png)
+![results2](/results/Results2.png)
 
 ## Table of Content
 
-- [Summary](#summary)
+- [Summary](#Summary)
 - [Working with the repo](#Working-with-the-repo)
-    - [Dependencies](#Dependencies)
-    - [Setup](#Setup)
 - [Reproducing results](#Reproducing-results)
-    - [Training code](#Training-code)
-    - [Evaluation code](#Evaluation-code)
-    - [Pretrained models](#Pretrained-models)
 - [Results](#Results)
-- [Project structure](-Project-structure)
+- [Project structure](#Project-structure)
 
 ## Summary
 
-(Short summary of motivation, contributions and results)
+Deep learning architectures are continuously evolving, expanding their application areas and improving performance. The Temporal Fusion Transformer (TFT), a novel deep neural network, combines multiple deep learning approaches to offer capabilities such as inherently interpretable model predictions and self-adaptive architectural complexity. In this study, we apply this new algorithm to predict stock movements by comparing individual and global modeling techniques. Additionally, we evaluate the performance of forecasting errors against simpler benchmark models and integrate a trading strategy for further assessment. In our proposed experimental setup, the TFT models achieve a predictive performance comparable to that of the comparative methods. However, both modeling approaches reveal distinct patterns when analyzing trading returns, which at best correspond to the performance of a buy-and-hold strategy.
 
-**Keywords**: xxx (give at least 5 keywords / phrases).
+**Keywords**: Deep learning · Attention mechanisms · Financial time series forecasting · Stock movement prediction · Trading strategy
 
-**Full text**: [include a link that points to the full text of your thesis]
-*Remark*: a thesis is about research. We believe in the [open science](https://en.wikipedia.org/wiki/Open_science) paradigm. Research results should be available to the public. Therefore, we expect dissertations to be shared publicly. Preferably, you publish your thesis via the [edoc-server of the Humboldt-Universität zu Berlin](https://edoc-info.hu-berlin.de/de/publizieren/andere). However, other sharing options, which ensure permanent availability, are also possible. <br> Exceptions from the default to share the full text of a thesis require the approval of the thesis supervisor.  
+**Full text**: 
 
 ## Working with the repo
 
-### Dependencies
+The Python code is provided in Jupyter Notebooks.
 
-Which Python version is required? 
+The experiment was conducted using Python version 3.10.10 and the packages listed in the [requirements](requirements.txt) file.
 
-Does a repository have information on dependencies or instructions on how to set up the environment?
+For the TFT models, the code is written to utilize a CUDA-supported GPU.
 
-### Setup
-
-[This is an example]
-
-1. Clone this repository
-
-2. Create an virtual environment and activate it
-```bash
-python -m venv thesis-env
-source thesis-env/bin/activate
-```
-
-3. Install requirements
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+The code can be easily modified to run in different environments, such as Google Colab or CPU-only setups, if required.
 
 ## Reproducing results
 
-Describe steps how to reproduce your results.
+All results can be reproduced by following the steps from data download to producing results:
 
-Here are some examples:
-- [Paperswithcode](https://github.com/paperswithcode/releasing-research-code)
-- [ML Reproducibility Checklist](https://ai.facebook.com/blog/how-the-ai-community-can-get-serious-about-reproducibility/)
-- [Simple & clear Example from Paperswithcode](https://github.com/paperswithcode/releasing-research-code/blob/master/templates/README.md) (!)
-- [Example TensorFlow](https://github.com/NVlabs/selfsupervised-denoising)
+1 - [Download data](Data-download.ipynb) of stock information using yfinance.
 
-### Training code
+2 - [Data preparation](Data-preparation.ipynb) produces all input variables and a portfolio table.
 
-Does a repository contain a way to train/fit the model(s) described in the paper?
+2b - [Data analysis](Data-analysis.ipynb) provides a portfolio performance plot and summary statistics.
 
-### Evaluation code
+3 - Each model has its own Notebook. Note that rerunning a model would override the results, and therefore, it should be saved in subfolders such as No.1, No.2, etc.
 
-Does a repository contain a script to calculate the performance of the trained model(s) or run experiments on models?
-
-### Pretrained models
-
-Does a repository provide free access to pretrained model weights?
+4 - [Results](Results.ipynb) offers plots and data related to forecasting accuracy, trading strategy, and prediction interpretability.
 
 ## Results
 
-Does a repository contain a table/plot of main results and a script to reproduce those results?
+Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
 
 ## Project structure
 
-(Here is an example from SMART_HOME_N_ENERGY, [Appliance Level Load Prediction](https://github.com/Humboldt-WI/dissertations/tree/main/SMART_HOME_N_ENERGY/Appliance%20Level%20Load%20Prediction) dissertation)
-
 ```bash
-├── README.md
-├── requirements.txt                                -- required libraries
-├── data                                            -- stores csv file 
-├── plots                                           -- stores image files
-└── src
-    ├── prepare_source_data.ipynb                   -- preprocesses data
-    ├── data_preparation.ipynb                      -- preparing datasets
-    ├── model_tuning.ipynb                          -- tuning functions
-    └── run_experiment.ipynb                        -- run experiments 
-    └── plots                                       -- plotting functions                 
+├── data                                            -- stores input data
+├── results                                         -- stores output
+├
+├── 1. Data download.ipynb                          -- data download
+├── 2. Data preparation.ipynb                       -- data preparation
+├── 2b. Data analysis.ipynb                         -- data analysis
+├── 3. ARIMA - Individual benchmark.ipynb           -- ARIMA model
+├── 3. FNN - Global benchmark.ipynb                 -- FNN model
+├── 3. TFT - Global sector.ipynb                    -- Global TFT model with static input
+├── 3. TFT - Global.ipynb                           -- Global TFT model
+├── 3. TFT - Individual.ipynb                       -- Individual TFT model
+├── 4. Results.ipynb                                -- results
+├
+├── README.md                                       -- project overview
+└── requirements.txt                                -- necessary packages
 ```
