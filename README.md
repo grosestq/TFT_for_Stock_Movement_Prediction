@@ -42,11 +42,11 @@ The code can be easily modified to run in different environments, such as Google
 
 All results can be reproduced by following the steps from data download to producing results:
 
-1 - [Download data](Data-download.ipynb) of stock information using yfinance.
+1 - [Download data](Data_download.ipynb) of stock information using yfinance.
 
-2 - [Data preparation](Data-preparation.ipynb) produces all input variables and a portfolio table.
+2 - [Data preparation](Data_preparation.ipynb) produces all input variables and a portfolio table.
 
-2b - [Data analysis](Data-analysis.ipynb) provides a portfolio performance plot and summary statistics.
+2b - [Data analysis](Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
 
 3 - Each model has its own Notebook. Note that rerunning a model would override the results, and therefore, it should be saved in subfolders such as No.1, No.2, etc.
 
