@@ -42,19 +42,19 @@ The code can be easily modified to run in different environments, such as Google
 
 All results can be reproduced by following the steps from data download to producing results:
 
-1 - [Download data](1._Data_download.ipynb) of stock information using yfinance.
+1 - [Download data](1_Data_download.ipynb) of stock information using yfinance.
 
-2 - [Data preparation](2._Data_preparation.ipynb) produces all input variables and a portfolio table.
+2 - [Data preparation](2_Data_preparation.ipynb) produces all input variables and a portfolio table.
 
-2b - [Data analysis](2b._Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
+2b - [Data analysis](2b_Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
 
 3 - Each model has its own Notebook. Note that rerunning a model would override the results, and therefore, it should be saved in subfolders such as No.1, No.2, etc.
 
-4 - [Results](4._Results.ipynb) offers plots and data related to forecasting accuracy, trading strategy, and prediction interpretability.
+4 - [Results](4_Results.ipynb) offers plots and data related to forecasting accuracy, trading strategy, and prediction interpretability.
 
 ## Results
 
-Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](4._Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
+Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](4_Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
 
 ## Project structure
 
@@ -62,15 +62,15 @@ Reproducing can be skipped by using the original results saved in the [results](
 ├── data                                            -- stores input data
 ├── results                                         -- stores output
 ├
-├── 1. Data download.ipynb                          -- data download
-├── 2. Data preparation.ipynb                       -- data preparation
-├── 2b. Data analysis.ipynb                         -- data analysis
-├── 3. ARIMA - Individual benchmark.ipynb           -- ARIMA model
-├── 3. FNN - Global benchmark.ipynb                 -- FNN model
-├── 3. TFT - Global sector.ipynb                    -- Global TFT model with static input
-├── 3. TFT - Global.ipynb                           -- Global TFT model
-├── 3. TFT - Individual.ipynb                       -- Individual TFT model
-├── 4. Results.ipynb                                -- results
+├── 1_Data_download.ipynb                           -- data download
+├── 2_Data_preparation.ipynb                        -- data preparation
+├── 2b_Data_analysis.ipynb                          -- data analysis
+├── 3_ARIMA_Individual benchmark.ipynb              -- ARIMA model
+├── 3_FNN_Global_benchmark.ipynb                    -- FNN model
+├── 3_TFT_Global_sector.ipynb                       -- Global TFT model with static input
+├── 3_TFT_Global.ipynb                              -- Global TFT model
+├── 3_TFT_Individual.ipynb                          -- Individual TFT model
+├── 4_Results.ipynb                                 -- results
 ├
 ├── README.md                                       -- project overview
 └── requirements.txt                                -- necessary packages
