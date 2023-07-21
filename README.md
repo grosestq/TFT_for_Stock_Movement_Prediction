@@ -42,19 +42,19 @@ The code can be easily modified to run in different environments, such as Google
 
 All results can be reproduced by following the steps from data download to producing results:
 
-1 - [Download data](Data_download.ipynb) of stock information using yfinance.
+1 - [Download data](1._Data_download.ipynb) of stock information using yfinance.
 
-2 - [Data preparation](Data_preparation.ipynb) produces all input variables and a portfolio table.
+2 - [Data preparation](2._Data_preparation.ipynb) produces all input variables and a portfolio table.
 
-2b - [Data analysis](2b_Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
+2b - [Data analysis](2b._Data_analysis.ipynb) provides a portfolio performance plot and summary statistics.
 
 3 - Each model has its own Notebook. Note that rerunning a model would override the results, and therefore, it should be saved in subfolders such as No.1, No.2, etc.
 
-4 - [Results](Results.ipynb) offers plots and data related to forecasting accuracy, trading strategy, and prediction interpretability.
+4 - [Results](4._Results.ipynb) offers plots and data related to forecasting accuracy, trading strategy, and prediction interpretability.
 
 ## Results
 
-Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
+Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](4._Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
 
 ## Project structure
 
