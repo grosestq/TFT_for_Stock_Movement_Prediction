@@ -18,6 +18,7 @@
 - [Working with the repo](#Working-with-the-repo)
 - [Reproducing results](#Reproducing-results)
 - [Results](#Results)
+- [Hardware requirements](#Hardware-requirements)
 - [Project structure](#Project-structure)
 
 ## Summary
@@ -55,6 +56,23 @@ All results can be reproduced by following the steps from data download to produ
 ## Results
 
 Reproducing can be skipped by using the original results saved in the [results](results/) folder and executing the [Results](4_Results.ipynb) code. Please note that the original training logs will not be provided due to their sheer size, and as a result, the model's prediction insights cannot be reproduced.
+
+## Hardware requirements
+
+For the experiment, the following hardware was used:
+
+- CPU: i5-6600 CPU @ 3.30GHz
+- RAM: 16,0 GB 2133 MHz
+- GPU: GeForce GTX 960 4 GB GDDR5
+
+Using a GPU is highly recommended for working with the transformer models. A CPU-only setup can increase the training time by a factor of 10 compared to the proposed hardware setup.
+
+The following calculation times were needed:
+
+- ARIMA:              ~ 5 hours - rolling one-step forecast and hyperparameter tuning - CPU only
+- FNN:                ~ 10 minutes - no hyperparameter tuning - CPU only
+- TFT - Global:       ~ 6 hours - without hyperparameter tuning - with GPU
+- TFT - Individual:   ~ 12 hours - without hyperparameter tuning - with GPU
 
 ## Project structure
 
